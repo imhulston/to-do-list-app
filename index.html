@@ -12,5 +12,11 @@
 	<input type="button" value="Add Item" onclick="addItem();">
 	<br>
 	<div id="list"></div>
+
+	<script>
+		if(localStorage.storedList) {
+			loadList();
+		}
+	</script>
 </body>
 </html>
