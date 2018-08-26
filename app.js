@@ -10,3 +10,7 @@ function removeItem() {
 	document.getElementById("list").removeChild(this);
 	saveList();
 }
+
+function saveList() {
+	localStorage.storedList = document.getElementById("list").innerHTML;
+}
