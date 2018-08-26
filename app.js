@@ -14,3 +14,10 @@ function removeItem() {
 function saveList() {
 	localStorage.storedList = document.getElementById("list").innerHTML;
 }
+
+function loadList() {
+	document.getElementById("list").innerHTML = localStorage.storedList;
+	for(var i = 0; i < list.children.length; i++) {
+		list.children[i].onclick = removeItem;
+	}
+}
